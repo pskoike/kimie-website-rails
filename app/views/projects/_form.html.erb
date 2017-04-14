@@ -3,7 +3,15 @@
   <%= f.input 'name_pt' %>
   <%= f.input 'year', collection: (2000...3000) %>
   <%= f.input 'director' %>
-  <%= f.input 'category' %>
-  <%= f.input 'job' %>
-  <%= f.submit 'Add Project', class: 'btn btn-success btn-md' %>
+  <%= f.input 'category', collection: ['Curta e Média-metragem', 'Série de TV', 'Programa de TV', 'Publicidade e Clipe', 'Institucional'] %>
+  <%= f.input 'job', collection: ['1º Assistente de direção','2º Assistente de direção' ] %>
+  <%= f.submit 'Add/Update Project', class: 'btn btn-success btn-md' %>
 <% end %>
+
+
+<!-- Longa-Metragem
+3. Curta e Média-Metragens
+4. Séries de TV
+5. Programas de TV
+6. Publicidades e Clipes
+7. Institucionais -->
