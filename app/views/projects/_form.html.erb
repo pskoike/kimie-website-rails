@@ -1,0 +1,9 @@
+<%= simple_form_for @project do |f| %>
+  <%= f.input 'name_en' %>
+  <%= f.input 'name_pt' %>
+  <%= f.input 'year', collection: (2000...3000) %>
+  <%= f.input 'director' %>
+  <%= f.input 'category' %>
+  <%= f.input 'job' %>
+  <%= f.submit 'Add Project', class: 'btn btn-success btn-md' %>
+<% end %>
