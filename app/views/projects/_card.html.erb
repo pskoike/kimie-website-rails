@@ -1,0 +1,23 @@
+<div class="row">
+  <% @projects.each do |p| %>
+    <div class="col-xs-12 col-md-6 col-lg-3">
+      <div class="card card-project">
+        <!-- <div class="card-img" style="background-image: url('http://imagens.azzi.net.br/belas_img//cartaz/251918.jpg')">
+        </div> -->
+        <div class="card-img" style="background-image: url('<%= p.image_url %>')">
+        </div>
+        <div class="card-content text-center">
+          <h2><%= p.name_pt %></h2>
+          <!-- <p> # <%= p.name_en %></p> -->
+          <p><strong><%= p.year %></strong></p>
+          <p><i class="fa fa-bullhorn" aria-hidden="true"></i> <%= p.director %></p>
+          <p><i class="fa fa-film" aria-hidden="true"></i> <%= link_to 'Trailer', '#'%></p>
+        </div>
+        <div class="card-footer">
+          <hr>
+          <h6><%= p.category %><br><%= p.job %></h6>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
