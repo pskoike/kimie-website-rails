@@ -19,9 +19,9 @@ $header-font: "Raleway", "Helvetica", "sans-serif";
 // Font-size and line-height
 $base-size: 14px;
 $base-height: 1.4;
-$font-size-h1: 4vw;
-$font-size-h2: 2rem;
-$font-size-h3: 3rem;
+$font-size-h1: 4vh;
+$font-size-h2: 3vh;
+$font-size-h3: 2vh;
 
 /* -------------------------------------
  * Colors
@@ -34,4 +34,8 @@ $blue: #469AE0;
 $yellow: #FDB631;
 $orange: #E67E22;
 $green: #32B796;
-$gray: #000000;
+$grey: #000000;
+
+// Btn
+$btn-default-bg: rgba(#ffffff, 0);
+$btn-default-border: $grey;
