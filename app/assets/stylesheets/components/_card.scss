@@ -1,0 +1,40 @@
+.card {
+  background-color: #FFFFFF;
+  border: 1px solid #f4f4f4;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+  border-right: 5px;
+  height: auto;
+
+  &-project {
+    margin: 10px 0;
+
+    .card-img {
+      padding: 0;
+      width: 100%;
+      height: 280px;
+      text-align: center;
+      background-color: black;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position-x: 50%;
+
+    }
+
+    .card-content {
+      padding: 10px;
+      height: auto;
+      min-height: 180px;
+
+    }
+
+    .card-footer {
+      text-align: center;
+      h6 {
+        padding: 0;
+      }
+      hr {
+        margin: 0;
+      }
+    }
+  }
+}
