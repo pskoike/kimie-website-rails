@@ -1,9 +1,30 @@
-<h1>Projects#index</h1>
-<p>Find me in app/views/projects/index.html.erb</p>
-<% @projects.each do |p| %>
-<p><%= p.name_pt %></p>
-<p><%= p.name_en %></p>
-<p><%= p.year %></p>
-<p><%= p.category %></p>
-<p><%= p.director %></p>
-<% end %>
+<div class="container">
+
+    <h1>Projects#index</h1>
+    <p>Find me in app/views/projects/index.html.erb</p>
+    <div class="row">
+      <% @projects.each do |p| %>
+      <div class="col-xs-12 col-md-6 col-lg-3">
+        <div class="card card-project">
+          <!-- <div class="card-img" style="background-image: url('http://imagens.azzi.net.br/belas_img//cartaz/251918.jpg')">
+          </div> -->
+          <div class="card-img" style="background-image: url('http://t3.gstatic.com/images?q=tbn:ANd9GcQljQlnXVcKPug3i8twYZB6oH6YOoVlu41itP9W7mlQ4BKV4I6o')">
+          </div>
+          <div class="card-content text-center">
+            <h2><%= p.name_pt %></h2>
+            <!-- <p> # <%= p.name_en %></p> -->
+            <p><strong><%= p.year %></strong></p>
+            <p><i class="fa fa-bullhorn" aria-hidden="true"></i> <%= p.director %></p>
+            <p><i class="fa fa-film" aria-hidden="true"></i> <%= link_to 'Trailer', '#'%></p>
+          </div>
+          <div class="card-footer">
+            <hr>
+            <h6><%= p.category %><br><%= p.job %></h6>
+          </div>
+
+
+        </div>
+      </div>
+      <% end %>
+  </div>
+</div>
