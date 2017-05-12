@@ -1,5 +1,6 @@
 class ProjectsController < ApplicationController
   before_action :set_project, only: [:edit, :show, :destroy, :update]
+  http_basic_authenticate_with :name => "kimie", :password => "1234", only: :admin
 
   def index
     @projects = Project.all
@@ -15,10 +16,14 @@ class ProjectsController < ApplicationController
   def show
   end
 
+  def admin
+    @projects = Project.all
+  end
+
   def create
     @project = Project.new(project_params)
     if @project.save
-      redirect_to projects_path
+      redirect_to admin_path
     else
       render 'new'
     end
@@ -26,7 +31,7 @@ class ProjectsController < ApplicationController
 
   def update
     if @project.update(project_params)
-      redirect_to projects_path
+      redirect_to admin_path
     else
       render 'edit'
     end
@@ -34,7 +39,7 @@ class ProjectsController < ApplicationController
 
   def destroy
     @project.destroy
-    redirect_to projects_path
+    redirect_to admin_path
   end
 
   private
