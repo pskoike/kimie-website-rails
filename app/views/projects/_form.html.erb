@@ -5,6 +5,7 @@
   <%= f.input 'director' %>
   <%= f.input 'category', collection: ['Curta e Média-metragem', 'Série de TV', 'Programa de TV', 'Publicidade e Clipe', 'Institucional'] %>
   <%= f.input 'job', collection: ['1º Assistente de direção','2º Assistente de direção' ] %>
+  <%= f.input 'image_url', as: :attachinary %>
   <%= f.submit 'Add/Update Project', class: 'btn btn-primary btn-md' %>
   <%= link_to 'Cancel', admin_path, class: 'btn btn-primary btn-md' %>
 <% end %>

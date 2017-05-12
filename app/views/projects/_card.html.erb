@@ -4,7 +4,7 @@
       <div class="card card-project">
         <!-- <div class="card-img" style="background-image: url('http://imagens.azzi.net.br/belas_img//cartaz/251918.jpg')">
         </div> -->
-        <div class="card-img" style="background-image: url('<%= p.image_url %>')">
+        <div class="card-img" style="background-image: url('<%= cl_image_path p.image_url.path, width: 200, height: 300, crop: :fill %>')">
         </div>
         <div class="card-content text-center">
           <h2><%= p.name_pt %></h2>
