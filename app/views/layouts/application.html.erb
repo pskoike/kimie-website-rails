@@ -14,4 +14,9 @@
   <body>
               <%= yield %>
   </body>
+
+  <%= javascript_tag do %>
+    $('div.tagsort-tags-container').tagSort({ items:'.item-to-filter', sortType: 'single' });
+  <% end %>
+
 </html>

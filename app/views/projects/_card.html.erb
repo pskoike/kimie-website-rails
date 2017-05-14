@@ -1,6 +1,6 @@
 <div class="row">
   <% @projects.each do |p| %>
-    <div class="col-xs-12 col-md-6 col-lg-3">
+    <div class="col-xs-12 col-md-6 col-lg-3 item-to-filter" data-item-tags="<%= p.job %>,<%= p.category %>">
       <div class="card card-project">
         <!-- <div class="card-img" style="background-image: url('http://imagens.azzi.net.br/belas_img//cartaz/251918.jpg')">
         </div> -->
@@ -21,3 +21,11 @@
     </div>
   <% end %>
 </div>
+
+
+<!-- Longa-Metragem
+3. Curta e Média-Metragens
+4. Séries de TV
+5. Programas de TV
+6. Publicidades e Clipes
+7. Institucionais -->
