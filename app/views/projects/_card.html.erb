@@ -11,7 +11,9 @@
           <!-- <p> # <%= p.name_en %></p> -->
           <p><strong><%= p.year %></strong></p>
           <p><i class="fa fa-bullhorn" aria-hidden="true"></i> <%= p.director %></p>
-          <p><i class="fa fa-film" aria-hidden="true"></i> <%= link_to 'Trailer', '#'%></p>
+          <% unless p.trailer_url.nil? %>
+          <p><i class="fa fa-film" aria-hidden="true"></i> <%= link_to 'Trailer', p.trailer_url, target: 'blank' %></p>
+          <% end %>
         </div>
         <div class="card-footer">
           <hr>
@@ -21,11 +23,3 @@
     </div>
   <% end %>
 </div>
-
-
-<!-- Longa-Metragem
-3. Curta e Média-Metragens
-4. Séries de TV
-5. Programas de TV
-6. Publicidades e Clipes
-7. Institucionais -->
