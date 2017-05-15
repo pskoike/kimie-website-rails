@@ -1,6 +1,6 @@
 class ProjectsController < ApplicationController
   before_action :set_project, only: [:edit, :show, :destroy, :update]
-  http_basic_authenticate_with :name => "kimie", :password => "1234", only: :admin
+  http_basic_authenticate_with :name => ENV['ADMIN_KEY'], :password => ENV['ADMIN_PASS'], only: :admin
 
   def index
     @projects = Project.all
