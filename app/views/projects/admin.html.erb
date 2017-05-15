@@ -7,38 +7,43 @@
 
     </div>
     <div class="col-xs-12 padded">
-      <table class="table table-responsive">
-  <thead class="thead-inverse">
-    <tr>
-      <th>#Id</th>
-      <th>Image</th>
-      <th>Name English</th>
-      <th>Name Portuguese</th>
-      <th>Category</th>
-      <th>Director</th>
-      <th>Year</th>
-      <th>Job</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @projects.each do |project| %>
-    <tr>
-      <th scope="row"><%= project.id %></th>
-      <!-- <td><%= image_tag(project.image_url, size: "50x50") unless project.image_url.nil? %></td> -->
-      <td><%= cl_image_tag project.image_url.path, width: 50, height: 50, crop: :fill unless project.image_url.nil?  %></td>
-      <td><%= project.name_en%></td>
-      <td><%= project.name_pt%></td>
-      <td><%= project.category %></td>
-      <td><%= project.director %></td>
-      <td><%= project.year %></td>
-      <td><%= project.job %></td>
-      <td><%= link_to 'Edit', edit_project_path(project) %></td>
-      <td><%= link_to 'Delete', project_path(project), method: :delete %></td>
-
-    </tr>
-    <% end %>
-  </tbody>
-</table>
+      <div class="table-responsive">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>#Id</th>
+            <th>Image</th>
+            <th>Name English</th>
+            <th>Name Portuguese</th>
+            <th>Category</th>
+            <th>Director</th>
+            <th>Year</th>
+            <th>Trailer link</th>
+            <th>Job</th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @projects.each do |project| %>
+          <tr>
+            <th scope="row"><%= project.id %></th>
+            <!-- <td><%= image_tag(project.image_url, size: "50x50") unless project.image_url.nil? %></td> -->
+            <td><%= cl_image_tag project.image_url.path, width: 50, height: 50, crop: :fill unless project.image_url.nil?  %></td>
+            <td><%= project.name_en%></td>
+            <td><%= project.name_pt%></td>
+            <td><%= project.category %></td>
+            <td><%= project.director %></td>
+            <td><%= project.year %></td>
+            <td><%= project.trailer_url %></td>
+            <td><%= project.job %></td>
+            <td><%= link_to 'Edit', edit_project_path(project) %></td>
+            <td><%= link_to 'Delete', project_path(project), method: :delete %></td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+      </div>
 
 
 
